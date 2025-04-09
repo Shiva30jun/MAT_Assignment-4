@@ -21,4 +21,8 @@ describe("paintRequiredCalculator", () => {
   test("Verify that paintRequiredCalculator should handle negative values correctly when area is -50 and coveragePerLiter is 10", () => {
     expect(paintRequiredCalculator(-50, 10)).toBe(-5);
   });
+
+  test("Verify that paintRequiredCalculator should return NaN when area is NaN and coveragePerLiter is 10", () => {
+    expect(paintRequiredCalculator(NaN, 10)).toBeNaN();
+  });
 });
