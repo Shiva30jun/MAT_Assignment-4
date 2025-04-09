@@ -28,4 +28,9 @@ describe('paintRequiredForMultipleCoats', () => {
   test('Verify that paintRequiredForMultipleCoats should handle decimal area and integer coveragePerLiter correctly when area is 55.5, coveragePerLiter is 10, and coats is 2', () => {
     expect(paintRequiredForMultipleCoats(55.5, 10, 2)).toBe(11.1);
   });
+  
+  test('Verify that paintRequiredForMultipleCoats should return 0 when area is 100 and coveragePerLiter is Infinity', () => {
+    expect(paintRequiredForMultipleCoats(100, Infinity, 2)).toBe(0);
+  });
+  
 });
