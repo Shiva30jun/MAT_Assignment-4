@@ -2,5 +2,7 @@ export default function calculateCanvasSize(
   length: string,
   width: string
 ) {
-  return 2 * (parseInt(length) + parseInt(width));
+  return Math.sqrt(parseFloat(length) ** 2 + parseFloat(width) ** 2);
 }
+
+
