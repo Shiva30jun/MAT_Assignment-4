@@ -56,6 +56,6 @@ npm run test -- --watch
 To run a specific test, you can use
 
 ```bash
-npm run test [my test name]
+npm run test [my test name ]
 ```
 
