@@ -41,4 +41,7 @@ describe('calculateTotalCost', () => {
     expect(calculateTotalCost(50.00000005, 50.00000005)).toBeCloseTo(100.0000001);
   });
   
+  test('Verify that calculateTotalCost should return Infinity when paintCost is Infinity and laborCost is 100', () => {
+    expect(calculateTotalCost(Infinity, 100)).toBe(Infinity);
+  });
 });
