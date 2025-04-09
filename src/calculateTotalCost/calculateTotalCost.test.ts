@@ -36,4 +36,9 @@ describe('calculateTotalCost', () => {
   test('Verify that calculateTotalCost should return 0 when paintCost is 0 and laborCost is 0', () => {
     expect(calculateTotalCost(0, 0)).toBe(0);
   });
+
+  test('Verify that calculateTotalCost should return approx. 100.0000001 when paintCost is 50.00000005 and laborCost is 50.00000005', () => {
+    expect(calculateTotalCost(50.00000005, 50.00000005)).toBeCloseTo(100.0000001);
+  });
+  
 });
