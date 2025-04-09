@@ -44,4 +44,8 @@ describe('calculateTotalCost', () => {
   test('Verify that calculateTotalCost should return Infinity when paintCost is Infinity and laborCost is 100', () => {
     expect(calculateTotalCost(Infinity, 100)).toBe(Infinity);
   });
+
+  test('Verify that calculateTotalCost should return -Infinity when paintCost is -Infinity and laborCost is 0', () => {
+    expect(calculateTotalCost(-Infinity, 0)).toBe(-Infinity);
+  });
 });
