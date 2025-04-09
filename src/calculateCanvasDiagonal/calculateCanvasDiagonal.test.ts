@@ -50,5 +50,7 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('', '4')).toBeNaN();
   });
 
-  
+  test('Verify that calculateCanvasDiagonal should return NaN when length is 3 and width is empty', () => {
+    expect(calculateCanvasDiagonal('3', '')).toBeNaN();
+  });
 });
