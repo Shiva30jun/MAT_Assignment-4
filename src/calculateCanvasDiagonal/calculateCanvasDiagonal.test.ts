@@ -44,5 +44,11 @@ describe('calculateCanvasDiagonal', () => {
   test('Verify that calculateCanvasDiagonal should return approx. 5.385 when length is 3.1 and width is 4.2', () => {
     expect(calculateCanvasDiagonal('3.1', '4.2')).toBeCloseTo(Math.sqrt(3.1 ** 2 + 4.2 ** 2));
   });
+
+
+  test('Verify that calculateCanvasDiagonal should return NaN when length is empty and width is 4', () => {
+    expect(calculateCanvasDiagonal('', '4')).toBeNaN();
+  });
+
   
 });
