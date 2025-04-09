@@ -37,5 +37,7 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('3', 'b')).toBeNaN();
   });
 
-
+  test('Verify that calculateCanvasDiagonal should return approx. 2.5 when length is 1.5 and width is 2.0', () => {
+    expect(calculateCanvasDiagonal('1.5', '2.0')).toBeCloseTo(Math.sqrt(1.5 ** 2 + 2.0 ** 2));
+  });
 });
