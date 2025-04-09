@@ -45,4 +45,9 @@ describe('calculatePaintCost', () => {
   test('Verify that calculatePaintCost should return NaN when paintRequired is 10 and costPerLiter is NaN', () => {
     expect(calculatePaintCost(10, NaN)).toBeNaN();
   });
+
+  test('Verify that calculatePaintCost should return 0.0003 when paintRequired is 0.01 and costPerLiter is 0.03', () => {
+    expect(calculatePaintCost(0.01, 0.03)).toBeCloseTo(0.0003);
+  });
+  
 });
