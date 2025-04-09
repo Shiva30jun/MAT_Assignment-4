@@ -14,4 +14,7 @@ describe("paintRequiredCalculator", () => {
     expect(paintRequiredCalculator(50, 0)).toBe(Infinity);
   });
 
+  test("Verify that paintRequiredCalculator should handle decimal values correctly when area is 25.5 and coveragePerLiter is 5.1", () => {
+    expect(paintRequiredCalculator(25.5, 5.1)).toBeCloseTo(5);
+  });
 });
