@@ -1,9 +1,7 @@
 import paintRequiredCalculator from "./paintRequiredCalculator";
 
-describe("paint required calculator", () => {
-  test("should return expected result", () => {
-    const result = paintRequiredCalculator(50, 10);
-
-    expect(result).toEqual(5);
+describe("paintRequiredCalculator", () => {
+  test("Verify that paintRequiredCalculator should return 5 when area is 50 and coveragePerLiter is 10", () => {
+    expect(paintRequiredCalculator(50, 10)).toBe(5);
   });
 });
