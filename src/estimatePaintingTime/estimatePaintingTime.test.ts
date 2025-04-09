@@ -44,6 +44,8 @@ describe('estimatePaintingTime', () => {
   test('Verify that estimatePaintingTime should return NaN when area is 10 and paintingSpeed is NaN', () => {
     expect(estimatePaintingTime(10, NaN)).toBeNaN();
   });
-  
-  
+  test('Verify that estimatePaintingTime should return Infinity when area is Infinity and paintingSpeed is 10', () => {
+    expect(estimatePaintingTime(Infinity, 10)).toBe(Infinity);
+  });
+
 });
